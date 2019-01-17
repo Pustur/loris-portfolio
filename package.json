@@ -25,7 +25,7 @@
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
     "lint": "eslint \"src/**/*.js\"",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "test": "npm run format && npm run lint"
   },
   "devDependencies": {
     "eslint": "5.12.0",
@@ -45,5 +45,11 @@
   },
   "bugs": {
     "url": "https://github.com/Pustur/loris-portfolio/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "pre-push": "npm test"
+    }
   }
 }
