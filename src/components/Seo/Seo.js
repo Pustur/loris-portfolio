@@ -5,12 +5,9 @@ import { StaticQuery, graphql } from 'gatsby';
 
 const query = graphql`
   {
-    site {
-      siteMetadata {
-        title
-        description
-        author
-      }
+    contentfulMetadata {
+      title
+      description
     }
   }
 `;
@@ -18,14 +15,15 @@ const query = graphql`
 const Seo = ({ description, lang, meta, title }) => (
   <StaticQuery
     query={query}
-    render={data => {
-      const metaDescription = description || data.site.siteMetadata.description;
+    render={({ contentfulMetadata }) => {
+      const page = title ? `${title} | ` : '';
+      const metaTitle = `${page}${contentfulMetadata.title}`;
+      const metaDescription = description || contentfulMetadata.description;
 
       return (
         <Helmet
           htmlAttributes={{ lang }}
-          title={title}
-          titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+          title={metaTitle}
           meta={[
             {
               name: 'description',
@@ -33,7 +31,7 @@ const Seo = ({ description, lang, meta, title }) => (
             },
             {
               property: 'og:title',
-              content: title,
+              content: metaTitle,
             },
             {
               property: 'og:description',
@@ -48,12 +46,8 @@ const Seo = ({ description, lang, meta, title }) => (
               content: 'summary',
             },
             {
-              name: 'twitter:creator',
-              content: data.site.siteMetadata.author,
-            },
-            {
               name: 'twitter:title',
-              content: title,
+              content: metaTitle,
             },
             {
               name: 'twitter:description',
