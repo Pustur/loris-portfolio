@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Anchor from '../Anchor/Anchor';
-
 const Project = ({ title, description, type, technologies, links }) => (
   <article>
     <h3>{title}</h3>
@@ -16,7 +14,7 @@ const Project = ({ title, description, type, technologies, links }) => (
     <ul>
       {links.map(link => (
         <li key={link.id}>
-          <Anchor href={link.href}>{link.text}</Anchor>
+          <a href={link.href}>{link.text}</a>
         </li>
       ))}
     </ul>

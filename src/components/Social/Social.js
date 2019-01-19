@@ -3,8 +3,6 @@ import marked from 'marked';
 import { StaticQuery, graphql } from 'gatsby';
 import { slug } from '../../utils/utils';
 
-import Anchor from '../Anchor/Anchor';
-
 const query = graphql`
   {
     contentfulSocial {
@@ -35,7 +33,7 @@ const Social = () => (
         <ul>
           {contentfulSocial.links.map(link => (
             <li key={link.id}>
-              <Anchor href={link.href}>{link.text}</Anchor>
+              <a href={link.href}>{link.text}</a>
             </li>
           ))}
         </ul>
