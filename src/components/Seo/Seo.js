@@ -15,7 +15,7 @@ const query = graphql`
   }
 `;
 
-const SEO = ({ description, lang, meta, title }) => (
+const Seo = ({ description, lang, meta, title }) => (
   <StaticQuery
     query={query}
     render={data => {
@@ -66,17 +66,17 @@ const SEO = ({ description, lang, meta, title }) => (
   />
 );
 
-SEO.defaultProps = {
+Seo.defaultProps = {
   description: '',
   lang: 'en',
   meta: [],
 };
 
-SEO.propTypes = {
+Seo.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.array,
   title: PropTypes.string.isRequired,
 };
 
-export default SEO;
+export default Seo;
