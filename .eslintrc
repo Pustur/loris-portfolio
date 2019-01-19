@@ -7,6 +7,7 @@
       { "extensions": [".js", ".jsx"] }
     ],
     "react/forbid-prop-types": "off",
+    "react/no-danger": "off",
     "import/prefer-default-export": "off"
   }
 }
