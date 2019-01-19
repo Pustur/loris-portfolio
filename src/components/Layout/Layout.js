@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Footer from '../Footer/Footer';
+
 const Layout = ({ children }) => (
   <div>
-    {children}
-    <footer>
-      © {new Date().getFullYear()}, Built with{' '}
-      <a href="https://www.gatsbyjs.org">Gatsby</a>
-    </footer>
+    <main>{children}</main>
+    <Footer />
   </div>
 );
 
