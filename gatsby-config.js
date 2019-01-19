@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
   siteMetadata: {
     title: 'Gatsby Default Starter',
@@ -30,6 +32,13 @@ module.exports = {
     },
     'gatsby-plugin-eslint',
     'gatsby-plugin-styled-components',
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.spaceId,
+        accessToken: process.env.accessToken,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
