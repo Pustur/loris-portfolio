@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Img from 'gatsby-image';
 
 import { slug } from '../../utils/utils';
 import TechnologyIcon from '../TechnologyIcon/TechnologyIcon';
 
-const Project = ({ title, description, type, technologies, links }) => (
+const Project = ({ title, description, type, technologies, links, fluid }) => (
   <article>
     <h3>{title}</h3>
     <div>{type}</div>
@@ -24,6 +25,7 @@ const Project = ({ title, description, type, technologies, links }) => (
         </li>
       ))}
     </ul>
+    <Img fluid={fluid} />
   </article>
 );
 
@@ -39,6 +41,13 @@ Project.propTypes = {
       href: PropTypes.string.isRequired,
     }).isRequired,
   ).isRequired,
+  fluid: PropTypes.shape({
+    base64: PropTypes.string.isRequired,
+    aspectRatio: PropTypes.number.isRequired,
+    src: PropTypes.string.isRequired,
+    srcSet: PropTypes.string.isRequired,
+    sizes: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default Project;

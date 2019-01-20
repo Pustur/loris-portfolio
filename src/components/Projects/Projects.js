@@ -22,6 +22,11 @@ const query = graphql`
           text
           href
         }
+        image {
+          fluid(maxWidth: 700) {
+            ...GatsbyContentfulFluid
+          }
+        }
       }
     }
   }
@@ -42,6 +47,7 @@ const Projects = () => (
                 type={project.type}
                 technologies={project.technologies}
                 links={project.links}
+                fluid={project.image.fluid}
               />
             </li>
           ))}
