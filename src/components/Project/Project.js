@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { slug } from '../../utils/utils';
+import TechnologyIcon from '../TechnologyIcon/TechnologyIcon';
+
 const Project = ({ title, description, type, technologies, links }) => (
   <article>
     <h3>{title}</h3>
@@ -8,7 +11,10 @@ const Project = ({ title, description, type, technologies, links }) => (
     <div dangerouslySetInnerHTML={{ __html: description }} />
     <ul>
       {technologies.map(technology => (
-        <li key={technology}>{technology}</li>
+        <li key={technology}>
+          {technology}
+          <TechnologyIcon icon={slug(technology)} aria-hidden />
+        </li>
       ))}
     </ul>
     <ul>
