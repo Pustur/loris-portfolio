@@ -1,9 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
+import styled from 'styled-components';
 
-import { slug } from '../../utils/utils';
-import TechnologyIcon from '../TechnologyIcon/TechnologyIcon';
+import Technology from '../Technology/Technology';
+
+const ListItem = styled.li`
+  display: inline-block;
+
+  & + & {
+    margin-left: 1rem;
+  }
+`;
 
 const Project = ({ title, description, type, technologies, links, fluid }) => (
   <article>
@@ -12,10 +20,9 @@ const Project = ({ title, description, type, technologies, links, fluid }) => (
     <div dangerouslySetInnerHTML={{ __html: description }} />
     <ul>
       {technologies.map(technology => (
-        <li key={technology}>
-          {technology}
-          <TechnologyIcon icon={slug(technology)} aria-hidden />
-        </li>
+        <ListItem key={technology}>
+          <Technology technology={technology} />
+        </ListItem>
       ))}
     </ul>
     <ul>
