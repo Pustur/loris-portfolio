@@ -12,7 +12,7 @@ import ReactDOM from 'react-dom';
 import Age from './src/components/Age/Age';
 
 const onInitialClientRender = () => {
-  const ageElements = document.querySelectorAll('[data-age]');
+  const ageElements = Array.from(document.querySelectorAll('[data-age]'));
 
   if (!ageElements.length) return;
 
