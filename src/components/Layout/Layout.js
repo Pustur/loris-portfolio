@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { createGlobalStyle } from 'styled-components';
 import { colors, fonts } from '../../utils/variables';
 
-import Menu from '../Menu/Menu';
+import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
 const GlobalStyles = createGlobalStyle`
@@ -35,11 +35,7 @@ const GlobalStyles = createGlobalStyle`
 const Layout = ({ children }) => (
   <>
     <GlobalStyles />
-    <header>
-      <nav>
-        <Menu />
-      </nav>
-    </header>
+    <Header />
     <main>{children}</main>
     <Footer />
   </>
