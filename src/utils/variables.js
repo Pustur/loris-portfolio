@@ -2,7 +2,7 @@ const colors = {
   foreground: '#d4d4e8',
   foregroundLight: '#fff',
   background: '#1c1c2e',
-  accent: '#ee0a96',
+  accent: '#fb0ea0',
 };
 
 const fonts = {
