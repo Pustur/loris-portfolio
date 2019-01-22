@@ -1,4 +1,5 @@
 const colors = {
+  foregroundDark: '#5d5d82',
   foreground: '#d4d4e8',
   foregroundLight: '#fff',
   background: '#1c1c2e',
