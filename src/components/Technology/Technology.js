@@ -20,6 +20,7 @@ const Label = styled.span`
   background-color: ${colors.accent};
   opacity: 0;
   white-space: nowrap;
+  pointer-events: none;
   transition: all 0.3s ease;
 
   &::after {

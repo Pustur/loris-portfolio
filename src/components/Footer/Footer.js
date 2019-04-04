@@ -2,7 +2,9 @@ import React from 'react';
 import marked from 'marked';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
-import { colors } from '../../utils/variables';
+import { colors, mediaQueries } from '../../utils/variables';
+
+import Container from '../Container/Container';
 
 const query = graphql`
   {
@@ -16,11 +18,27 @@ const query = graphql`
 
 const StyledFooter = styled.footer`
   color: ${colors.foregroundDark};
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 12px;
+  padding: 2rem 0;
+  text-align: center;
+`;
+
+const StyledContainer = styled(Container)`
+  @media (${mediaQueries.mdMin}) {
+    display: inline-flex;
+    align-items: center;
+    text-align: left;
+
+    > * + * {
+      margin-left: 2rem;
+    }
+  }
 `;
 
 const ContentfulLogo = styled.img`
-  max-width: 100px;
-  width: 100%;
+  width: 100px;
 `;
 
 const Footer = () => (
@@ -28,17 +46,19 @@ const Footer = () => (
     query={query}
     render={({ contentfulFooter }) => (
       <StyledFooter>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: marked(contentfulFooter.body.body),
-          }}
-        />
-        <a href="https://www.contentful.com/" rel="nofollow">
-          <ContentfulLogo
-            src="https://images.ctfassets.net/fo9twyrwpveg/7F5pMEOhJ6Y2WukCa2cYws/398e290725ef2d3b3f0f5a73ae8401d6/PoweredByContentful_DarkBackground.svg"
-            alt="Powered by Contentful"
+        <StyledContainer>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: marked(contentfulFooter.body.body),
+            }}
           />
-        </a>
+          <a href="https://www.contentful.com/" rel="nofollow">
+            <ContentfulLogo
+              src="https://images.ctfassets.net/fo9twyrwpveg/7F5pMEOhJ6Y2WukCa2cYws/398e290725ef2d3b3f0f5a73ae8401d6/PoweredByContentful_DarkBackground.svg"
+              alt="Powered by Contentful"
+            />
+          </a>
+        </StyledContainer>
       </StyledFooter>
     )}
   />

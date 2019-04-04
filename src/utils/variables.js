@@ -3,6 +3,7 @@ const colors = {
   foreground: '#d4d4e8',
   foregroundLight: '#fff',
   background: '#1c1c2e',
+  backgroundTransparent: 'rgba(28, 28, 46, 0)',
   accent: '#fb0ea0',
 };
 
@@ -12,4 +13,21 @@ const fonts = {
   headings: '"Streamster", "Blacksword", sans-serif',
 };
 
-export { colors, fonts };
+const margins = {
+  section: '10vw',
+};
+
+const mediaQueries = {
+  smMax: 'max-width: 767px',
+  mdMin: 'min-width: 768px',
+  mdMax: 'max-width: 1023px',
+  lgMin: 'min-width: 1024px',
+};
+
+const zIndex = {
+  header: 30,
+  projectInfo: 20,
+  projectOverlay: 10,
+};
+
+export { colors, fonts, margins, mediaQueries, zIndex };
