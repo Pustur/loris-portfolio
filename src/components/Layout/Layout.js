@@ -1,7 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { createGlobalStyle } from 'styled-components';
-import { colors, fonts, mediaQueries, margins } from '../../utils/variables';
+import {
+  colors,
+  fonts,
+  sizes,
+  mediaQueries,
+  margins,
+} from '../../utils/variables';
 import {
   streamsterWoff,
   streamsterWoff2,
@@ -98,6 +104,7 @@ const GlobalStyles = createGlobalStyle`
 
   main {
     display: block;
+    padding-top: ${sizes.header.height.smMin};
 
     > * {
       margin-top: ${margins.section};
@@ -120,6 +127,10 @@ const GlobalStyles = createGlobalStyle`
 
     h3 {
       font-size: 2.7rem;
+    }
+
+    main {
+      padding-top: ${sizes.header.height.mdMin};
     }
   }
 

@@ -13,6 +13,15 @@ const fonts = {
   headings: '"Streamster", "Blacksword", sans-serif',
 };
 
+const sizes = {
+  header: {
+    height: {
+      smMin: '50px',
+      mdMin: '70px',
+    },
+  },
+};
+
 const margins = {
   section: '10vw',
 };
@@ -30,4 +39,4 @@ const zIndex = {
   projectOverlay: 10,
 };
 
-export { colors, fonts, margins, mediaQueries, zIndex };
+export { colors, fonts, sizes, margins, mediaQueries, zIndex };
