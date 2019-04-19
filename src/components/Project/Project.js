@@ -18,7 +18,7 @@ const StyledProject = styled.article`
     }
 
     > *:nth-child(2) {
-      text-align: ${props => props.isOdd && 'right'};
+      ${props => props.isOdd && 'text-align: right;'}
       grid-column: ${props => (props.isOdd ? '2 / -1' : '1 / -2')};
       z-index: ${zIndex.projectInfo};
     }
@@ -31,8 +31,8 @@ const StyledProject = styled.article`
   @media (${mediaQueries.lgMin}) {
     > *:nth-child(2) {
       max-width: 30rem;
-      margin-right: ${props => props.isOdd && 'auto'};
-      margin-left: ${props => !props.isOdd && 'auto'};
+      ${props => props.isOdd && 'margin-right: auto;'}
+      ${props => !props.isOdd && 'margin-left: auto;'}
     }
   }
 `;
@@ -75,8 +75,8 @@ const Info = styled.div`
 
     > :first-child {
       order: ${props => Number(props.isOdd)};
-      margin-left: ${props => props.isOdd && 1}rem;
-      margin-right: ${props => !props.isOdd && 1}rem;
+      ${props => props.isOdd && 'margin-left: 1rem;'}
+      ${props => !props.isOdd && 'margin-right: 1rem;'}
     }
   }
 `;
