@@ -8,14 +8,7 @@ import {
   mediaQueries,
   margins,
 } from '../../utils/variables';
-import {
-  streamsterWoff,
-  streamsterWoff2,
-  europaRegularWoff,
-  europaRegularWoff2,
-  europaBoldWoff,
-  europaBoldWoff2,
-} from '../../utils/fonts';
+import { streamsterWoff, streamsterWoff2 } from '../../utils/fonts';
 
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
@@ -27,24 +20,6 @@ const GlobalStyles = createGlobalStyle`
       url(${streamsterWoff2}) format('woff2'),
       url(${streamsterWoff}) format('woff');
     font-weight: normal;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'Europa';
-    src: local('Europa'), local('Europa-Regular'),
-      url(${europaRegularWoff2}) format('woff2'),
-      url(${europaRegularWoff}) format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'Europa';
-    src: local('Europa'), local('Europa-Bold'),
-      url(${europaBoldWoff2}) format('woff2'),
-      url(${europaBoldWoff}) format('woff');
-    font-weight: bold;
     font-style: normal;
   }
 
