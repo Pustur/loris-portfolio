@@ -1,6 +1,9 @@
 require('dotenv').config();
 
 module.exports = {
+  siteMetadata: {
+    siteUrl: 'https://public.pustur.now.sh',
+  },
   plugins: [
     'gatsby-plugin-react-helmet',
     {

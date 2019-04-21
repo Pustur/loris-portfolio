@@ -3,8 +3,16 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 
+import shareImage from '../../images/share-image.jpg';
+
 const query = graphql`
   {
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
+
     contentfulMetadata {
       title
       description
@@ -15,7 +23,7 @@ const query = graphql`
 const Seo = ({ description, lang, meta, title }) => (
   <StaticQuery
     query={query}
-    render={({ contentfulMetadata }) => {
+    render={({ site, contentfulMetadata }) => {
       const page = title ? `${title} | ` : '';
       const metaTitle = `${page}${contentfulMetadata.title}`;
       const metaDescription = description || contentfulMetadata.description;
@@ -42,16 +50,16 @@ const Seo = ({ description, lang, meta, title }) => (
               content: 'website',
             },
             {
+              property: 'og:url',
+              content: site.siteMetadata.siteUrl,
+            },
+            {
+              property: 'og:image',
+              content: `${site.siteMetadata.siteUrl}${shareImage}`,
+            },
+            {
               name: 'twitter:card',
-              content: 'summary',
-            },
-            {
-              name: 'twitter:title',
-              content: metaTitle,
-            },
-            {
-              name: 'twitter:description',
-              content: metaDescription,
+              content: 'summary_large_image',
             },
           ].concat(meta)}
         />
