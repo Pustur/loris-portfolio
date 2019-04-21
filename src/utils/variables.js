@@ -14,16 +14,13 @@ const fonts = {
 };
 
 const sizes = {
+  section: '10vw',
   header: {
     height: {
       smMin: '50px',
       mdMin: '70px',
     },
   },
-};
-
-const margins = {
-  section: '10vw',
 };
 
 const mediaQueries = {
@@ -39,4 +36,4 @@ const zIndex = {
   projectOverlay: 10,
 };
 
-export { colors, fonts, sizes, margins, mediaQueries, zIndex };
+export { colors, fonts, sizes, mediaQueries, zIndex };
