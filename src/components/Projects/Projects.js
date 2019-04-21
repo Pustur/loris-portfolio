@@ -76,7 +76,7 @@ const Projects = () => (
                   technologies={project.technologies}
                   links={project.links}
                   fluid={project.image.fluid}
-                  reversed={i % 2 !== 0}
+                  isOdd={i % 2 !== 0}
                 />
               </ProjectsItem>
             ))}

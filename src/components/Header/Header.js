@@ -36,6 +36,7 @@ const Header = () => (
     <StyledContainer>
       <a href="/">
         <Logo />
+        <span className="sr-only">Home</span>
       </a>
       <nav>
         <Menu />

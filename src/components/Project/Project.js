@@ -18,21 +18,21 @@ const StyledProject = styled.article`
     }
 
     > *:nth-child(2) {
-      text-align: ${props => props.reversed && 'right'};
-      grid-column: ${props => (props.reversed ? '2 / -1' : '1 / -2')};
+      ${props => props.isOdd && 'text-align: right;'}
+      grid-column: ${props => (props.isOdd ? '2 / -1' : '1 / -2')};
       z-index: ${zIndex.projectInfo};
     }
 
     > *:nth-child(1) {
-      grid-column: ${props => (props.reversed ? '1 / -2' : '2 / -1')};
+      grid-column: ${props => (props.isOdd ? '1 / -2' : '2 / -1')};
     }
   }
 
   @media (${mediaQueries.lgMin}) {
     > *:nth-child(2) {
       max-width: 30rem;
-      margin-right: ${props => props.reversed && 'auto'};
-      margin-left: ${props => !props.reversed && 'auto'};
+      ${props => props.isOdd && 'margin-right: auto;'}
+      ${props => !props.isOdd && 'margin-left: auto;'}
     }
   }
 `;
@@ -48,7 +48,7 @@ const StyledImg = styled(Img)`
       bottom: 0;
       left: 0;
       background-image: linear-gradient(
-        to ${props => (props.reversed ? 'left' : 'right')},
+        to ${props => (props.isOdd ? 'left' : 'right')},
         rgba(0, 0, 0, 0.7),
         rgba(0, 0, 0, 0) 40%
       );
@@ -74,9 +74,9 @@ const Info = styled.div`
     align-items: center;
 
     > :first-child {
-      order: ${props => Number(props.reversed)};
-      margin-left: ${props => props.reversed && 1}rem;
-      margin-right: ${props => !props.reversed && 1}rem;
+      order: ${props => Number(props.isOdd)};
+      ${props => props.isOdd && 'margin-left: 1rem;'}
+      ${props => !props.isOdd && 'margin-right: 1rem;'}
     }
   }
 `;
@@ -174,15 +174,15 @@ const Project = ({
   technologies,
   links,
   fluid,
-  reversed,
+  isOdd,
 }) => (
-  <StyledProject reversed={reversed}>
+  <StyledProject isOdd={isOdd}>
     <div>
-      <StyledImg fluid={fluid} reversed={reversed} />
+      <StyledImg fluid={fluid} isOdd={isOdd} />
     </div>
     <div>
       <Title>{title}</Title>
-      <Info reversed={reversed}>
+      <Info isOdd={isOdd}>
         <div>
           <Type>{type}</Type>
         </div>
@@ -225,7 +225,7 @@ Project.propTypes = {
     srcSet: PropTypes.string.isRequired,
     sizes: PropTypes.string.isRequired,
   }).isRequired,
-  reversed: PropTypes.bool.isRequired,
+  isOdd: PropTypes.bool.isRequired,
 };
 
 export default Project;
