@@ -17,7 +17,7 @@ const Title = styled.h1`
   margin: 0;
 `;
 
-const Subtitle = styled.h2`
+const Subtitle = styled.p`
   margin: 0;
   font-family: ${fonts.base};
   font-size: 1rem;
@@ -31,14 +31,12 @@ const Subtitle = styled.h2`
 `;
 
 const Hero = () => (
-  <section>
-    <StyledContainer>
-      <TitleContainer>
-        <Title>Loris Bettazza</Title>
-        <Subtitle>Front-End Web Developer</Subtitle>
-      </TitleContainer>
-    </StyledContainer>
-  </section>
+  <StyledContainer>
+    <TitleContainer>
+      <Title>Loris Bettazza</Title>
+      <Subtitle>Front-End Web Developer</Subtitle>
+    </TitleContainer>
+  </StyledContainer>
 );
 
 export default Hero;

@@ -17,14 +17,14 @@ const StyledProject = styled.article`
       grid-row: 1 / 2;
     }
 
+    > *:nth-child(1) {
+      grid-column: ${props => (props.isOdd ? '1 / -2' : '2 / -1')};
+    }
+
     > *:nth-child(2) {
       ${props => props.isOdd && 'text-align: right;'}
       grid-column: ${props => (props.isOdd ? '2 / -1' : '1 / -2')};
       z-index: ${zIndex.projectInfo};
-    }
-
-    > *:nth-child(1) {
-      grid-column: ${props => (props.isOdd ? '1 / -2' : '2 / -1')};
     }
   }
 
