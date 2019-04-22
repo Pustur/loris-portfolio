@@ -11,6 +11,12 @@ import ReactDOM from 'react-dom';
 
 import Age from './src/components/Age/Age';
 
+const onClientEntry = async () => {
+  if (typeof IntersectionObserver === `undefined`) {
+    await import(`intersection-observer`);
+  }
+};
+
 const onInitialClientRender = () => {
   const ageElements = Array.from(document.querySelectorAll('[data-age]'));
 
@@ -26,4 +32,4 @@ const onInitialClientRender = () => {
   });
 };
 
-export { onInitialClientRender };
+export { onClientEntry, onInitialClientRender };
