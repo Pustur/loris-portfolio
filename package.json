@@ -18,6 +18,7 @@
     "gatsby-source-contentful": "2.0.50",
     "gatsby-source-filesystem": "2.0.29",
     "gatsby-transformer-sharp": "2.1.18",
+    "intersection-observer": "0.5.1",
     "marked": "0.6.2",
     "prop-types": "15.7.2",
     "react": "16.7.0",
