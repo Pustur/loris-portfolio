@@ -15,10 +15,11 @@ const TitleContainer = styled.div`
 
 const Title = styled.h1`
   margin: 0;
+  line-height: 1;
 `;
 
 const Subtitle = styled.p`
-  margin: 0;
+  margin: 0.5em 0 0;
   font-family: ${fonts.base};
   font-size: 1rem;
   color: ${colors.foregroundDark};
@@ -27,6 +28,7 @@ const Subtitle = styled.p`
     position: absolute;
     bottom: 0;
     right: 0;
+    transform: translateY(100%);
   }
 `;
 

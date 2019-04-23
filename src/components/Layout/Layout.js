@@ -2,18 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { createGlobalStyle } from 'styled-components';
 import { colors, fonts, sizes, mediaQueries } from '../../utils/variables';
-import { streamsterWoff, streamsterWoff2 } from '../../utils/fonts';
+import { gilroyWoff, gilroyWoff2 } from '../../utils/fonts';
 
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
 const GlobalStyles = createGlobalStyle`
   @font-face {
-    font-family: 'Streamster';
-    src: local('Streamster'),
-      url(${streamsterWoff2}) format('woff2'),
-      url(${streamsterWoff}) format('woff');
-    font-weight: normal;
+    font-family: 'Gilroy';
+    src: local('Gilroy ExtraBold'), local('Gilroy-ExtraBold'),
+      url(${gilroyWoff2}) format('woff2'),
+      url(${gilroyWoff}) format('woff');
+    font-weight: 800;
     font-style: normal;
   }
 
@@ -42,7 +42,8 @@ const GlobalStyles = createGlobalStyle`
   h3 {
     color: ${colors.foregroundLight};
     font-family: ${fonts.headings};
-    font-weight: 400;
+    font-weight: 800;
+    letter-spacing: -0.03em;
   }
 
   h1 {

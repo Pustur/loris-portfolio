@@ -10,7 +10,7 @@ const colors = {
 const fonts = {
   base:
     '"Europa", "Avenir", "-apple-system", "Helvetica Neue", "Arial", sans-serif',
-  headings: '"Streamster", "Blacksword", sans-serif',
+  headings: '"Gilroy", sans-serif',
 };
 
 const sizes = {
