@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Container from '../Container/Container';
-import { fonts, colors, mediaQueries } from '../../utils/variables';
 
 const StyledContainer = styled(Container)`
   text-align: center;
@@ -18,25 +17,10 @@ const Title = styled.h1`
   line-height: 1;
 `;
 
-const Subtitle = styled.p`
-  margin: 0.5em 0 0;
-  font-family: ${fonts.base};
-  font-size: 1rem;
-  color: ${colors.foregroundDark};
-
-  @media (${mediaQueries.lgMin}) {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    transform: translateY(100%);
-  }
-`;
-
 const Hero = () => (
   <StyledContainer>
     <TitleContainer>
       <Title>Loris Bettazza</Title>
-      <Subtitle>Front-End Web Developer</Subtitle>
     </TitleContainer>
   </StyledContainer>
 );
