@@ -1,4 +1,4 @@
-import streamsterWoff from '../fonts/Streamster.woff';
-import streamsterWoff2 from '../fonts/Streamster.woff2';
+import gilroyWoff from '../fonts/Gilroy-ExtraBold.woff';
+import gilroyWoff2 from '../fonts/Gilroy-ExtraBold.woff2';
 
-export { streamsterWoff, streamsterWoff2 };
+export { gilroyWoff, gilroyWoff2 };
