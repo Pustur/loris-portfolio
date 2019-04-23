@@ -2,10 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Container from '../Container/Container';
-import { fonts, colors, mediaQueries } from '../../utils/variables';
+
+import sun from '../../images/sun.svg';
 
 const StyledContainer = styled(Container)`
   text-align: center;
+  padding-top: 2.8rem;
+  padding-bottom: 2.8rem;
+  background-image: url(${sun});
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 `;
 
 const TitleContainer = styled.div`
@@ -18,25 +25,10 @@ const Title = styled.h1`
   line-height: 1;
 `;
 
-const Subtitle = styled.p`
-  margin: 0.5em 0 0;
-  font-family: ${fonts.base};
-  font-size: 1rem;
-  color: ${colors.foregroundDark};
-
-  @media (${mediaQueries.lgMin}) {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    transform: translateY(100%);
-  }
-`;
-
 const Hero = () => (
   <StyledContainer>
     <TitleContainer>
       <Title>Loris Bettazza</Title>
-      <Subtitle>Front-End Web Developer</Subtitle>
     </TitleContainer>
   </StyledContainer>
 );
