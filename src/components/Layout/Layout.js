@@ -42,7 +42,8 @@ const GlobalStyles = createGlobalStyle`
   h3 {
     color: ${colors.foregroundLight};
     font-family: ${fonts.headings};
-    font-weight: 400;
+    font-weight: 800;
+    letter-spacing: -0.03em;
   }
 
   h1 {
