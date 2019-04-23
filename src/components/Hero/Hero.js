@@ -3,8 +3,16 @@ import styled from 'styled-components';
 
 import Container from '../Container/Container';
 
+import sun from '../../images/sun.svg';
+
 const StyledContainer = styled(Container)`
   text-align: center;
+  padding-top: 2.8rem;
+  padding-bottom: 2.8rem;
+  background-image: url(${sun});
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 `;
 
 const TitleContainer = styled.div`
