@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { StaticQuery, graphql } from 'gatsby';
+
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+
 import { slug } from '../../utils/utils';
 import { colors, mediaQueries } from '../../utils/variables';
 

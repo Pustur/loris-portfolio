@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
+
 import { InView } from 'react-intersection-observer';
 
 import { colors } from '../../utils/variables';

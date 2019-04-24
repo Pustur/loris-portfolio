@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Container from '../Container/Container';
 import Logo from '../Logo/Logo';
 import Menu from '../Menu/Menu';
+
 import { colors, zIndex, mediaQueries } from '../../utils/variables';
 
 const StyledHeader = styled.header`

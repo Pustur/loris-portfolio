@@ -2,11 +2,12 @@ import React from 'react';
 import marked from 'marked';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
-import { slug } from '../../utils/utils';
 
 import Container from '../Container/Container';
 import Separator from '../Separator/Separator';
 import Project from '../Project/Project';
+
+import { slug } from '../../utils/utils';
 import { mediaQueries } from '../../utils/variables';
 
 const query = graphql`

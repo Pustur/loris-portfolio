@@ -2,9 +2,10 @@ import React from 'react';
 import marked from 'marked';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
-import { colors, mediaQueries } from '../../utils/variables';
 
 import Container from '../Container/Container';
+
+import { colors, mediaQueries } from '../../utils/variables';
 
 const query = graphql`
   {

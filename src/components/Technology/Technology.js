@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+import TechnologyIcon from '../TechnologyIcon/TechnologyIcon';
+
 import { slug } from '../../utils/utils';
 import { colors } from '../../utils/variables';
-import TechnologyIcon from '../TechnologyIcon/TechnologyIcon';
 
 const arrowSize = 8;
 

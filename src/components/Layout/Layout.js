@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { createGlobalStyle } from 'styled-components';
-import { colors, fonts, sizes, mediaQueries } from '../../utils/variables';
-import { gilroyWoff, gilroyWoff2 } from '../../utils/fonts';
 
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+
+import { colors, fonts, sizes, mediaQueries } from '../../utils/variables';
+import { gilroyWoff, gilroyWoff2 } from '../../utils/fonts';
 
 const GlobalStyles = createGlobalStyle`
   @font-face {

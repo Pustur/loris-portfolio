@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
 import styled from 'styled-components';
-import { colors, mediaQueries, zIndex } from '../../utils/variables';
 
+import Img from 'gatsby-image';
 import Technology from '../Technology/Technology';
+
+import { colors, mediaQueries, zIndex } from '../../utils/variables';
 
 const StyledProject = styled.article`
   @media (${mediaQueries.mdMin}) {
