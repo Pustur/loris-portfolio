@@ -1,10 +1,11 @@
 const colors = {
-  foregroundDark: '#5d5d82',
+  foregroundDark: '#8181ad',
   foreground: '#d4d4e8',
   foregroundLight: '#fff',
   background: '#1c1c2e',
   backgroundTransparent: 'rgba(28, 28, 46, 0)',
   accent: '#fb0ea0',
+  accentDark: '#e2078e',
 };
 
 const fonts = {

@@ -88,7 +88,7 @@ const Type = styled.div`
   letter-spacing: 0.1em;
   font-size: 14px;
   color: ${colors.foregroundLight};
-  background-color: ${colors.accent};
+  background-color: ${colors.accentDark};
   line-height: 1;
   border-radius: 99px;
   padding: 0.4rem 0.6rem;
