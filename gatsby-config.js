@@ -36,6 +36,7 @@ module.exports = {
         accessToken: process.env.accessToken,
       },
     },
+    'gatsby-plugin-netlify',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-offline',
   ],
