@@ -2,7 +2,7 @@
 
 > My personal portfolio website, a place to showcase my projects 👨‍💻
 
-The website is available at [www.lorisbettazza.com](https://www.lorisbettazza.com/)
+The website is available at [lorisbettazza.com](https://lorisbettazza.com/)
 
 ## Technologies used
 
