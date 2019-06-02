@@ -20,8 +20,6 @@ const onClientEntry = async () => {
 const onInitialClientRender = () => {
   const ageElements = Array.from(document.querySelectorAll('[data-age]'));
 
-  if (!ageElements.length) return;
-
   ageElements.forEach(ageElement => {
     const { age } = ageElement.dataset;
 
