@@ -2,7 +2,7 @@ require('dotenv').config();
 
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://lorisbettazza.com',
+    siteUrl: 'https://www.lorisbettazza.com',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -36,6 +36,7 @@ module.exports = {
         accessToken: process.env.accessToken,
       },
     },
+    'gatsby-plugin-netlify',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-offline',
   ],

@@ -10,6 +10,7 @@ import { gilroyWoff, gilroyWoff2 } from '../../utils/fonts';
 
 const GlobalStyles = createGlobalStyle`
   @font-face {
+    font-display: swap;
     font-family: 'Gilroy';
     src: local('Gilroy ExtraBold'), local('Gilroy-ExtraBold'),
       url(${gilroyWoff2}) format('woff2'),

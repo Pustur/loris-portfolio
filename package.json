@@ -2,7 +2,7 @@
   "name": "loris-portfolio",
   "private": true,
   "description": "My personal portfolio website showcasing my projects",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Loris Bettazza <loris.bettazza@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "1.10.0",
@@ -10,6 +10,7 @@
     "gatsby": "2.8.2",
     "gatsby-image": "2.1.2",
     "gatsby-plugin-manifest": "2.1.1",
+    "gatsby-plugin-netlify": "2.0.17",
     "gatsby-plugin-offline": "2.1.1",
     "gatsby-plugin-react-helmet": "3.0.12",
     "gatsby-plugin-sharp": "2.1.3",
