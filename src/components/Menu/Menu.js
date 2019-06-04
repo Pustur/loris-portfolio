@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 
+import Scrollchor from 'react-scrollchor';
+
 import { slug } from '../../utils/utils';
 import { colors, mediaQueries } from '../../utils/variables';
 
@@ -49,7 +51,7 @@ const Item = styled.li`
   }
 `;
 
-const Link = styled.a`
+const Link = styled(Scrollchor)`
   color: ${colors.foreground};
   transition: color 0.3s ease;
 
@@ -69,11 +71,33 @@ const Menu = () => (
           data.contentfulProjects.title,
           data.contentfulContact.title,
           data.contentfulSocial.title,
-        ].map(item => (
-          <Item key={item}>
-            <Link href={`#${slug(item)}`}>{item}</Link>
-          </Item>
-        ))}
+        ].map(item => {
+          const targetId = `#${slug(item)}`;
+
+          return (
+            <Item key={item}>
+              <Link
+                to={targetId}
+                animate={{ offset: -100, duration: 600 }}
+                disableHistory
+                afterAnimate={() => {
+                  const target = document.querySelector(targetId);
+
+                  if (!target) return;
+
+                  target.focus({ preventScroll: true });
+
+                  if (target !== document.activeElement) {
+                    target.tabIndex = -1;
+                    target.focus({ preventScroll: true });
+                  }
+                }}
+              >
+                {item}
+              </Link>
+            </Item>
+          );
+        })}
       </List>
     )}
   />
