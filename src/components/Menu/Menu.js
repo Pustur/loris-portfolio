@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 
-import AnchorLink from 'react-anchor-link-smooth-scroll';
-
 import { slug } from '../../utils/utils';
 import { colors, mediaQueries } from '../../utils/variables';
 
@@ -51,7 +49,7 @@ const Item = styled.li`
   }
 `;
 
-const Link = styled(AnchorLink)`
+const Link = styled.a`
   color: ${colors.foreground};
   transition: color 0.3s ease;
 
@@ -73,9 +71,7 @@ const Menu = () => (
           data.contentfulSocial.title,
         ].map(item => (
           <Item key={item}>
-            <Link offset={100} href={`#${slug(item)}`}>
-              {item}
-            </Link>
+            <Link href={`#${slug(item)}`}>{item}</Link>
           </Item>
         ))}
       </List>
