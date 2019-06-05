@@ -2,7 +2,7 @@
   "name": "loris-portfolio",
   "private": true,
   "description": "My personal portfolio website showcasing my projects",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "Loris Bettazza <loris.bettazza@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "1.10.0",
@@ -23,10 +23,10 @@
     "marked": "0.6.2",
     "prop-types": "15.7.2",
     "react": "16.7.0",
-    "react-anchor-link-smooth-scroll": "1.0.12",
     "react-dom": "16.7.0",
     "react-helmet": "5.2.1",
     "react-intersection-observer": "8.23.0",
+    "react-scrollchor": "6.0.0",
     "slugify": "1.3.4",
     "styled-components": "4.2.1"
   },

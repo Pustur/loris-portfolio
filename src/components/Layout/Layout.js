@@ -81,6 +81,7 @@ const GlobalStyles = createGlobalStyle`
     > * {
       margin-top: ${sizes.section};
       margin-bottom: ${sizes.section};
+      outline: none; /* Sorry */
     }
   }
 
