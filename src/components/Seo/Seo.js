@@ -73,13 +73,14 @@ Seo.defaultProps = {
   description: '',
   lang: 'en',
   meta: [],
+  title: '',
 };
 
 Seo.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.array,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
 };
 
 export default Seo;

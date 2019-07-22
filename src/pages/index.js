@@ -10,7 +10,7 @@ import Projects from '../components/Projects/Projects';
 
 const IndexPage = () => (
   <Layout>
-    <Seo title="Home" />
+    <Seo />
     <Hero />
     <AboutMe />
     <Projects />
