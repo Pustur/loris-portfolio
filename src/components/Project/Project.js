@@ -188,11 +188,17 @@ const Project = ({
           <Type>{type}</Type>
         </div>
         <TechnologyList>
-          {technologies.sort().map(technology => (
-            <TechnologyItem key={technology}>
-              <Technology technology={technology} />
-            </TechnologyItem>
-          ))}
+          {technologies
+            .sort(
+              (a, b) =>
+                a.length - b.length ||
+                a.toLowerCase().localeCompare(b.toLowerCase()),
+            )
+            .map(technology => (
+              <TechnologyItem key={technology}>
+                <Technology technology={technology} />
+              </TechnologyItem>
+            ))}
         </TechnologyList>
       </Info>
       <div dangerouslySetInnerHTML={{ __html: description }} />
