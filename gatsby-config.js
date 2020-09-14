@@ -25,12 +25,15 @@ module.exports = {
         theme_color: '#1c1c2e',
         display: 'minimal-ui',
         icon: 'src/images/favicon.png', // This path is relative to the root of the site.
+        icon_options: {
+          purpose: 'maskable',
+        },
       },
     },
     'gatsby-plugin-eslint',
     'gatsby-plugin-styled-components',
     {
-      resolve: `gatsby-source-contentful`,
+      resolve: 'gatsby-source-contentful',
       options: {
         spaceId: process.env.spaceId,
         accessToken: process.env.accessToken,

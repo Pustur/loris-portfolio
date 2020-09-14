@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { colors } from '../../utils/variables';
+import { colors, sizes } from '../../utils/variables';
 
-const size = 32;
+const size = sizes.technologyIcon;
 const icons = {
   atom: (
     <svg width={size} height={size} viewBox="0 0 256 256">

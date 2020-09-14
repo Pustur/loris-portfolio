@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import TechnologyIcon from '../TechnologyIcon/TechnologyIcon';
 
 import { slug } from '../../utils/utils';
-import { colors } from '../../utils/variables';
+import { colors, sizes, mediaQueries } from '../../utils/variables';
 
 const arrowSize = 8;
 
@@ -35,6 +35,14 @@ const Label = styled.span`
     transform: translate3d(-50%, 50%, 0) rotate(45deg);
     background-color: ${colors.accent};
   }
+
+  @media (${mediaQueries.smMax}) {
+    transform: translate3d(-${sizes.technologyIcon / 2}px, -100%, 0);
+
+    &::after {
+      left: ${sizes.technologyIcon / 2}px;
+    }
+  }
 `;
 
 const Container = styled.div`
@@ -43,6 +51,16 @@ const Container = styled.div`
   &:hover ${Label} {
     opacity: 1;
     transform: translate3d(-50%, calc(-100% - ${arrowSize * 1.5}px), 0);
+  }
+
+  @media (${mediaQueries.smMax}) {
+    &:hover ${Label} {
+      transform: translate3d(
+        -${sizes.technologyIcon / 2}px,
+        calc(-100% - ${arrowSize * 1.5}px),
+        0
+      );
+    }
   }
 `;
 
