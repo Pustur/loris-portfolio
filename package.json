@@ -58,6 +58,12 @@
   "bugs": {
     "url": "https://github.com/Pustur/loris-portfolio/issues"
   },
+  "browserslist": [
+    "> 2%",
+    "last 2 versions",
+    "not dead",
+    "not ie > 0"
+  ],
   "husky": {
     "hooks": {
       "pre-commit": "npm test",
