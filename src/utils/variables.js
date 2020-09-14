@@ -15,6 +15,7 @@ const fonts = {
 };
 
 const sizes = {
+  technologyIcon: 32,
   section: '10vw',
   header: {
     height: {
