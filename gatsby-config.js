@@ -30,7 +30,6 @@ module.exports = {
         },
       },
     },
-    'gatsby-plugin-eslint',
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-source-contentful',
