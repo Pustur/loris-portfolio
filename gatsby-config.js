@@ -34,8 +34,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-contentful',
       options: {
-        spaceId: process.env.spaceId,
-        accessToken: process.env.accessToken,
+        spaceId: process.env.SPACE_ID,
+        accessToken: process.env.ACCESS_TOKEN,
       },
     },
     'gatsby-plugin-netlify',
