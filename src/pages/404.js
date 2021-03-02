@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 import Layout from '../components/Layout/Layout';
 import Container from '../components/Container/Container';
@@ -11,7 +12,7 @@ const NotFoundPage = () => (
       <h1>404 - Not found</h1>
       <p>The page you are looking for doesn&apos;t exist :(</p>
       <p>
-        <a href="/">Return to home page</a>
+        <Link to="/">Return to home page</Link>
       </p>
     </Container>
   </Layout>
