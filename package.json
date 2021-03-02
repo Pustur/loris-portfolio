@@ -27,7 +27,6 @@
     "react-helmet": "6.1.0",
     "react-intersection-observer": "8.31.0",
     "react-scrollchor": "6.0.0",
-    "slugify": "1.4.6",
     "styled-components": "5.2.1"
   },
   "license": "MIT",
