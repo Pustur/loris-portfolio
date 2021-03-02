@@ -185,7 +185,7 @@ const icons = {
     </svg>
   ),
 
-  'sublime-text': (
+  'sublime text': (
     <svg width={size} height={size} viewBox="0 0 256 256">
       <g fill="none">
         <rect fill={colors.accent} height="256" rx="28" width="256" />
@@ -197,7 +197,7 @@ const icons = {
     </svg>
   ),
 
-  'visual-studio-code': (
+  'visual studio code': (
     <svg width={size} height={size} viewBox="0 0 256 256">
       <path
         d="m192 0v219.9l-192-28.5 192 64.6 64-26.6v-198.8-.1-3.9zm-67.2 37.5-58.8 58.1-35.4-26.7-14.6 4.9 36 35.6-36 35.6 14.6 4.9 35.4-26.7 58.8 58.1 35.2-14.9v-114zm0 41.4v61l-40.5-30.5z"

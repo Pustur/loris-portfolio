@@ -6,13 +6,13 @@ import { StaticQuery, graphql } from 'gatsby';
 import Container from '../Container/Container';
 import Separator from '../Separator/Separator';
 
-import { slug } from '../../utils/utils';
 import { mediaQueries } from '../../utils/variables';
 
 const query = graphql`
   {
     contentfulAboutMe {
       title
+      slug
       body {
         body
       }
@@ -37,7 +37,7 @@ const AboutMe = () => (
   <StaticQuery
     query={query}
     render={({ contentfulAboutMe }) => (
-      <AboutMeSection id={slug(contentfulAboutMe.title)}>
+      <AboutMeSection id={contentfulAboutMe.slug}>
         <Container>
           <h2>{contentfulAboutMe.title}</h2>
           <Separator />

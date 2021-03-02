@@ -6,13 +6,13 @@ import { StaticQuery, graphql } from 'gatsby';
 import Container from '../Container/Container';
 import Separator from '../Separator/Separator';
 
-import { slug } from '../../utils/utils';
 import { colors, mediaQueries } from '../../utils/variables';
 
 const query = graphql`
   {
     contentfulSocial {
       title
+      slug
       body {
         body
       }
@@ -90,7 +90,7 @@ const Social = () => (
   <StaticQuery
     query={query}
     render={({ contentfulSocial }) => (
-      <SocialSection id={slug(contentfulSocial.title)}>
+      <SocialSection id={contentfulSocial.slug}>
         <Container>
           <h2>{contentfulSocial.title}</h2>
           <Separator />
