@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 import TechnologyIcon from '../TechnologyIcon/TechnologyIcon';
 
-import { slug } from '../../utils/utils';
 import { colors, sizes, mediaQueries } from '../../utils/variables';
 
 const arrowSize = 8;
@@ -67,7 +66,7 @@ const Container = styled.div`
 const Technology = ({ technology }) => (
   <Container>
     <Label>{technology}</Label>
-    <TechnologyIcon icon={slug(technology)} aria-hidden />
+    <TechnologyIcon icon={technology.toLowerCase()} aria-hidden />
   </Container>
 );
 

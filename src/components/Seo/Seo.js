@@ -8,15 +8,10 @@ import shareImage from '../../images/share-image.jpg';
 
 const query = graphql`
   {
-    site {
-      siteMetadata {
-        siteUrl
-      }
-    }
-
     contentfulMetadata {
       title
       description
+      siteUrl
     }
   }
 `;
@@ -24,7 +19,7 @@ const query = graphql`
 const Seo = ({ description, lang, meta, title }) => (
   <StaticQuery
     query={query}
-    render={({ site, contentfulMetadata }) => {
+    render={({ contentfulMetadata }) => {
       const page = title ? `${title} | ` : '';
       const metaTitle = `${page}${contentfulMetadata.title}`;
       const metaDescription = description || contentfulMetadata.description;
@@ -52,11 +47,11 @@ const Seo = ({ description, lang, meta, title }) => (
             },
             {
               property: 'og:url',
-              content: site.siteMetadata.siteUrl,
+              content: contentfulMetadata.siteUrl,
             },
             {
               property: 'og:image',
-              content: `${site.siteMetadata.siteUrl}${shareImage}`,
+              content: `${contentfulMetadata.siteUrl}${shareImage}`,
             },
             {
               name: 'twitter:card',

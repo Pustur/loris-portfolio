@@ -7,13 +7,13 @@ import Container from '../Container/Container';
 import Separator from '../Separator/Separator';
 import Project from '../Project/Project';
 
-import { slug } from '../../utils/utils';
 import { mediaQueries } from '../../utils/variables';
 
 const query = graphql`
   {
     contentfulProjects {
       title
+      slug
       projects {
         id
         title
@@ -63,7 +63,7 @@ const Projects = () => (
   <StaticQuery
     query={query}
     render={({ contentfulProjects }) => (
-      <section id={slug(contentfulProjects.title)}>
+      <section id={contentfulProjects.slug}>
         <Container>
           <Title>{contentfulProjects.title}</Title>
           <Separator />

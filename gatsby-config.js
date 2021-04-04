@@ -1,9 +1,6 @@
 require('dotenv').config();
 
 module.exports = {
-  siteMetadata: {
-    siteUrl: 'https://lorisbettazza.com',
-  },
   plugins: [
     'gatsby-plugin-react-helmet',
     {
@@ -30,13 +27,12 @@ module.exports = {
         },
       },
     },
-    'gatsby-plugin-eslint',
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-source-contentful',
       options: {
-        spaceId: process.env.spaceId,
-        accessToken: process.env.accessToken,
+        spaceId: process.env.SPACE_ID,
+        accessToken: process.env.ACCESS_TOKEN,
       },
     },
     'gatsby-plugin-netlify',

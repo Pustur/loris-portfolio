@@ -4,22 +4,25 @@ import { StaticQuery, graphql } from 'gatsby';
 
 import Scrollchor from 'react-scrollchor';
 
-import { slug } from '../../utils/utils';
 import { colors, mediaQueries } from '../../utils/variables';
 
 const query = graphql`
   {
     contentfulAboutMe {
       title
+      slug
     }
     contentfulProjects {
       title
+      slug
     }
     contentfulSocial {
       title
+      slug
     }
     contentfulContact {
       title
+      slug
     }
   }
 `;
@@ -67,15 +70,15 @@ const Menu = () => (
     render={data => (
       <List>
         {[
-          data.contentfulAboutMe.title,
-          data.contentfulProjects.title,
-          data.contentfulContact.title,
-          data.contentfulSocial.title,
+          data.contentfulAboutMe,
+          data.contentfulProjects,
+          data.contentfulContact,
+          data.contentfulSocial,
         ].map(item => {
-          const targetId = `#${slug(item)}`;
+          const targetId = `#${item.slug}`;
 
           return (
-            <Item key={item}>
+            <Item key={item.slug}>
               <Link
                 to={targetId}
                 animate={{ offset: -100, duration: 600 }}
@@ -93,7 +96,7 @@ const Menu = () => (
                   }
                 }}
               >
-                {item}
+                {item.title}
               </Link>
             </Item>
           );
