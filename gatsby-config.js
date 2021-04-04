@@ -36,7 +36,23 @@ module.exports = {
       },
     },
     'gatsby-plugin-netlify',
-    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        query: `{
+          contentfulMetadata {
+            siteUrl
+          }
+
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+        }`,
+        resolveSiteUrl: data => data.contentfulMetadata.siteUrl,
+      },
+    },
     'gatsby-plugin-offline',
   ],
 };
