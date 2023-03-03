@@ -2,7 +2,7 @@
   "name": "loris-portfolio",
   "private": true,
   "description": "My personal portfolio website showcasing my projects",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "author": "Loris Bettazza <loris.bettazza@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "1.12.0",
